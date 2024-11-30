@@ -1,0 +1,6 @@
+Beans\Producto.class
+com\mycompany\gamefind\resources\JakartaEE8Resource.class
+Utils\Conexion.class
+CRUD\ManejoProducto.class
+Servlet\Registro_producto.class
+com\mycompany\gamefind\JakartaRestConfiguration.class
