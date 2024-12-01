@@ -13,13 +13,14 @@ import java.sql.SQLException;
  * @author Santiago C
  */
 public class Conexion {
-  private static final String URL = "jdbc:mysql://localhost:3306/aplicacionweb";
-  private static final String USER = "root";
-  private static final String PASSWORD = "root";
+  
 
   // Conexión a la base de datos
   public static Connection getConnection() {
-    Connection conexion = null;
+       String URL = "jdbc:mysql://localhost:3306/aplicacionweb";
+       String USER = "root";
+       String PASSWORD = "root";
+     Connection conexion = null;
     try {
      
       Class.forName("com.mysql.cj.jdbc.Driver");
@@ -32,6 +33,7 @@ public class Conexion {
       System.out.println("Error al conectar a la base de datos: " + e.getMessage());
       e.printStackTrace();
     }
+      
     return conexion;
   }
 }

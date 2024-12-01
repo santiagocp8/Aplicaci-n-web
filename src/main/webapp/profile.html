@@ -140,6 +140,19 @@ https://templatemo.com/tm-559-zay-shop
             </tr>
         </thead>
         <tbody id = "cuerpotabla">
+            <c:forEach items="${usuarios}" var="usuario">
+            <tr>
+              <td><c:out value="${usuario.nombre}" /></td>
+              <td><c:out value="${usuario.calificacion}" /></td>
+              <td><c:out value="${usuario.año}" /></td>
+              <td><c:out value="${usuario.genero}" /></td>
+              <td><c:out value="${usuario.precio}" /></td>
+              <td>
+                    <button class="btn btn-update" onclick="actualizarFila(this)">Actualizar</button>
+                    <button class="btn btn-delete" onclick="borrarFila(this)">Borrar</button>
+              </td>
+            </tr>
+          </c:forEach>
             
         </tbody>
     </table>
@@ -246,7 +259,6 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
-    <script src="assets/js/tabla.js"></script>
     <!-- End Script -->
 </body>
 
